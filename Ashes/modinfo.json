@@ -1,0 +1,13 @@
+{
+  "type": "code",
+  "modid": "ashes",
+  "name": "Smell the Ashes",
+  "authors": [
+    "Different55"
+  ],
+  "description": "Makes block fires leave behind ashes when they burn out.",
+  "version": "1.0.0",
+  "dependencies": {
+    "game": ""
+  }
+}

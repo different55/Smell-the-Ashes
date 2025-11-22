@@ -1,0 +1,83 @@
+{
+    code: "ashpile",
+    class: "BlockAsh",
+    variantgroups: [
+        { code: "height", states: ["1", "2", "3", "4", "5", "6", "7", "8"]},
+    ],
+    attributes: {
+        mapColorCode: "settlement",
+        fullBlockCode: "ashpile-8"
+    },
+    behaviors: [],
+    creativeinventory: { general: ["ashpile-1"], terrain: ["ashpile-1"]},
+    blockmaterial: "Soil",
+    drawtypebytype: {
+        "ashpile-1": "BlockLayer_1",
+        "ashpile-2": "BlockLayer_2",
+        "ashpile-3": "BlockLayer_3",
+        "ashpile-4": "BlockLayer_4",
+        "ashpile-5": "BlockLayer_5",
+        "ashpile-6": "BlockLayer_6",
+        "ashpile-7": "BlockLayer_7",
+        "ashpile-8": "Cube"
+    },
+    shapebytype: {
+        "*-1": { base: "game:block/basic/layers/2voxel" },
+        "*-2": { base: "game:block/basic/layers/4voxel" },
+        "*-3": { base: "game:block/basic/layers/6voxel" },
+        "*-4": { base: "game:block/basic/layers/8voxel" },
+        "*-5": { base: "game:block/basic/layers/10voxel" },
+        "*-6": { base: "game:block/basic/layers/12voxel" },
+        "*-7": { base: "game:block/basic/layers/14voxel" },
+        "*-8": { base: "game:block/basic/layers/16voxel" },
+    },
+    faceCullMode: "FlushExceptTop",
+    lightAbsorption: 0,
+    sidesolidByType: {
+      "*-8": { all: true },
+      "*": { all: false, down: true }
+    },
+    sideopaqueByType: {
+      "*-8": { all: true },
+      "*": { all: false, down: true }
+    },
+    textures: {
+        all: { base: "ashes:block/ash" }
+    },
+    replaceableByType: {
+        "*-8": 3000,
+        "*": 5900
+    },
+    resistance: 0.75,
+    collisionbox: { x1: 0, y1: 0, x2: 1, y2: 0, z2: 1,
+        y2ByType: {
+            "*-1": 0.125,
+            "*-2": 0.25,
+            "*-3": 0.375,
+            "*-4": 0.5,
+            "*-5": 0.625,
+            "*-6": 0.75,
+            "*-7": 0.875,
+            "*-8": 1,
+        }
+    },
+    selectionbox: { x1: 0, y1: 0, y2: 0, z2: 1,
+        y2ByType: {
+            "*-1": 0.125,
+            "*-2": 0.25,
+            "*-3": 0.375,
+            "*-4": 0.5,
+            "*-5": 0.625,
+            "*-6": 0.75,
+            "*-7": 0.875,
+            "*-8": 1
+        }
+    },
+    drops: [],
+    materialDensity: 600,
+    sounds: {
+        place: "game:block/sand",
+        break: "game:block/sand",
+        hit: "game:block/sand"
+    }
+}
