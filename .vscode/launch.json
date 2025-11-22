@@ -19,7 +19,7 @@
             "args": [
                 "--tracelog",
                 "--addModPath",
-                "${workspaceFolder}/AshesTest/bin/Debug/Mods"
+                "${workspaceFolder}/Ashes/bin/Debug/Mods"
             ],
             "console": "internalConsole",
             "stopAtEntry": false
@@ -39,7 +39,7 @@
             "args": [
                 "--tracelog",
                 "--addModPath",
-                "${workspaceFolder}/AshesTest/bin/Debug/Mods"
+                "${workspaceFolder}/Ashes/bin/Debug/Mods"
             ],
             "console": "internalConsole",
             "stopAtEntry": false
