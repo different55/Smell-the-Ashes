@@ -42,7 +42,7 @@
       "*": { all: false, down: true }
     },
     textures: {
-        all: { base: "ashes:block/ash" }
+        all: { base: "block/ash" }
     },
     replaceableByType: {
         "*-8": 3000,

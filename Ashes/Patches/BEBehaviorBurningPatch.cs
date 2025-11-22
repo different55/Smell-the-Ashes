@@ -14,7 +14,7 @@ public class BEBehaviorBurningPatch
 
         // Short burns don't leave ashes.
         float burnDuration = __instance.startDuration;
-        if (burnDuration < 12f) return;
+        if (burnDuration < 10f) return;
         
         BlockPos fuelPos = __instance.FuelPos;
         IWorldAccessor world = __instance.Blockentity.Api.World;
@@ -25,8 +25,11 @@ public class BEBehaviorBurningPatch
 
         // Longer burns = layerier ashes.
         int layers = GameMath.Clamp((int)Math.Ceiling(burnDuration / 25f), 1, 5);
+        if (world.Rand.NextDouble() < 0.125) return;
+        if (world.Rand.NextDouble() < 0.25) layers = (int)(layers * world.Rand.NextDouble());
+        if (layers <= 0) return;
         
-        Block ashBlock = world.GetBlock(new AssetLocation("ashes", $"ashblock-{layers}"));
+        Block ashBlock = world.GetBlock(new AssetLocation("smelltheashes", $"ashpile-{layers}"));
         if (ashBlock == null) return;
         
         world.BlockAccessor.SetBlock(ashBlock.BlockId, fuelPos);
